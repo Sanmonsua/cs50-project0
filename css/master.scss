@@ -1,0 +1,65 @@
+$margin-top : 70px;
+%table-cell {
+  padding: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+%home-sect {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  width: 100%;
+  height: 600px;
+}
+
+#index-home {
+  @extend %home-sect;
+  background-image: url("../img/main2.jpeg");
+}
+
+@media only screen and (max-width: 600px) {
+  #index-home {
+    @extend %home-sect;
+    background-image: url("../img/home_cup.jpg");
+  }
+}
+
+#boiling-home {
+  @extend %home-sect;
+  background-image: url("../img/boling.jpg");
+}
+
+#pourover-home{
+  @extend %home-sect;
+  background-image: url("../img/methods3.jpg");
+}
+
+#pressure-home{
+  background-image: url("../img/pressure.jpg");
+}
+
+#coldbrew-home{
+  @extend %home-sect;
+  background-image: url("../img/coldBrew2.jpg");
+}
+
+div h1, h2{
+  margin-top: $margin-top;
+}
+
+div > table{
+  margin-top: $margin-top;
+}
+
+table{
+  th{
+    @extend %table-cell;
+  }
+
+  td{
+    @extend %table-cell;
+  }
+}
